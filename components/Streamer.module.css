@@ -1,0 +1,78 @@
+.Streamer {
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0px 8px 32px -8px rgba(0,0,0,0.75);
+    background: #fff;
+    overflow: hidden;
+    text-decoration: 0;
+    color: #989ca4;
+    transition: all ease-in-out 150ms;
+    transform: translate3d(0,0,0);
+    max-width: 600px;
+}
+
+div:hover > .Streamer:not(:hover) .StreamerThumbnail {
+    opacity: 0.95;
+}
+
+.Streamer:hover {
+    box-shadow: 0px 32px 64px -8px rgba(0,0,0,0.5);
+    transform: translate3d(0,-8px,0);
+
+}
+
+.StreamerThumbnail {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: all ease-in-out 150ms;
+}
+
+.StreamerThumbnail::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    padding-bottom: calc(9/16 * 100%);
+}
+
+.StreamerInfo {
+    display: flex;
+    padding: 16px;
+}
+
+.StreamerAvatar {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-right: 12px;
+}
+
+.StreamerTitle {
+    font-size: 16px;
+
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.StreamerUser {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #69706c;
+    font-weight: 800;
+}
+
+.StreamerCategory {
+    font-size: 16px;
+    margin:0;
+    font-weight: 600;
+} 
