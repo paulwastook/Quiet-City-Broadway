@@ -1,90 +1,54 @@
-# Next + Netlify Starter
+# Broadway
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5b572a21-28e3-48ff-820a-8b95aafc2ba8/deploy-status)](https://app.netlify.com/sites/enchanting-blancmange-3bcee2/deploys)
 
-This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
+Based on the Next + Netlify Starter and inspired by https://www.neutralcafe.tv/, this is an open-source project for online communities to launch their own websites to showcase any specified streamers who are currently live.
 
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. With Netlify, you'll have access to features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing on deploy automatically.
+- [TL;DR](#tl-dr)
+- [Development](#development)
+  * [Running Locally](#running-locally)
+  * [Editing the streamer list](#editing-the-streamer-list)
+  * [Deployment](#deployment)
+- [Contributions](#contributions)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+## TL;DR
 
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
+Know what you're doing? Press this button, [edit the streamer list](#editing-the-streamer-list), tweak the styling, bish bash bosh. Enjoy!
 
-## Table of Contents:
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dirty-fisherman/Broadway)
 
-- [Getting Started](#getting-started)
-- [Installation options](#installation-options)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
+## Development
 
-## Getting Started
+This guide assumes that you have some knowledge of web development, working with APIs, and Netlify's platform.
 
-First, run the development server:
+Broadway relies on Netlify Functions to make calls to Twitch's APIs as they currently require authentication to fetch public streamer data.
 
-```bash
-npm run dev
-# or
-yarn dev
+You will need to add the following locally to a `.env` file in the root directory of the project (and to add these environment variables to your Netilify account)
+
+```env
+TWITCH_CLIENT_ID=your-twitch-client-id
+TWITCH_CLIENT_SECRET=your-twitch-client-secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If you have a Twitch developer account you can get these credentials over at https://dev.twitch.tv/console/apps by registering an application.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Running Locally
 
-### Installation options
+- Clone this repo
+- Install dependencies with `npm install`
+- Start the dev server with `netlify dev`
 
-**Option one:** One-click deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+### Editing the streamer list
 
-**Option two:** Manual clone
+The source for the streamer list is over at `functions/data/streamers.json`, replace the names in the array with your streamers of choice and they will appear on the website when they are live.
 
-1. Clone this repo: `git clone https://github.com/netlify-templates/next-netlify-starter.git`
-2. Navigate to the directory and run `npm install`
-3. Run `npm run dev`
-4. Make your changes
-5. Connect to [Netlify](https://url.netlify.com/Bk4UicocL) manually (the `netlify.toml` file is the one you'll need to make sure stays intact to make sure the export is done and pointed to the right stuff)
+### Deployment
 
-## Testing
+Deployment is all handled by Netlify once you've got your account all set up - you just push your changes via GitHub and BOOM the site is updated. That's right, BOOM.
 
-### Included Default Testing
+## Contributions
 
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
+Contributions are welcome! Open up a PR if you want to add tests, if you want to fix things, if you want to make this any easier for people to deploy. I'll do my best to review when I have the time and/or the energy.
 
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
-
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
-
-### Removing Cypress
-
-For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testing. This makes sure that we can validate that our templates are rendering and displaying as we’d expect. By default, we have Cypress not generate deploy links if our tests don’t pass. If you’d like to keep Cypress and still generate the deploy links, go into your `netlify.toml` and delete the plugin configuration lines:
-
-```diff
-[[plugins]]
-  package = "netlify-plugin-cypress"
--  [plugins.inputs.postBuild]
--    enable = true
--
--  [plugins.inputs]
--    enable = false 
-```
-
-If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
-
-```bash
-npm uninstall -D netlify-plugin-cypress
-```
-
-And lastly if you’d like to remove Cypress entirely, delete the entire `cypress` folder and the `cypress.config.ts` file. Then remove the dependency using:
-
-```bash
-npm uninstall -S cypress
-```
+My dream for this project was to create something as simple as possible for community owners to set up, sadly it's a bit more involved than I had initially thought, but hopefully this will give you a good starting point!
