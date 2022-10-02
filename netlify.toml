@@ -7,5 +7,5 @@
   included_files = ["data/**"]
 
 [template.environment]
-  TWITCH_CLIENT_ID = "Change me for your Twitch client id"
-  TWITCH_CLIENT_SECRET = "Change me for your Twitch client secret"
+  TWITCH_CLIENT_ID = "Twitch client id"
+  TWITCH_CLIENT_SECRET = "Twitch client secret"

@@ -13,9 +13,9 @@ Based on the Next + Netlify Starter and inspired by https://www.neutralcafe.tv/,
 
 ## TL;DR
 
-Know what you're doing? Press this button, [edit the streamer list](#editing-the-streamer-list), tweak the styling, bish bash bosh. Enjoy!
-
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dirty-fisherman/Broadway)
+
+Can't be arsed to read? Know what you're doing? Register an app over at https://dev.twitch.tv/console/apps, note down your client ID and secret (you'll be asked for them), and press this button. This will take you through the steps need to clone the project on GitHub and deploy it on your own Netlify account.
 
 ## Development
 
