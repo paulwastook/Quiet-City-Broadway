@@ -10,9 +10,10 @@ exports.handler = async (event, context, callback) => {
     scopes: '',
   }
 
+  const streamerList = streamers.length ? streamers : process.env.STREAMERS.split(',');
   const params = qs.stringify(opts);
   const { data } = await axios.post(`https://id.twitch.tv/oauth2/token?${params}`);
-  const url = `https://api.twitch.tv/helix/streams?user_login=${streamers.join('&user_login=')}`;
+  const url = `https://api.twitch.tv/helix/streams?user_login=${streamerList.join('&user_login=')}`;
   
 
   const {
