@@ -1,16 +1,15 @@
 import styles from './Header.module.css';
-import Image from 'next/image'
-import logo from '../public/logo.png'
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Image src={logo} alt="Broadway logo" />
+        <img src={process.env.NEXT_PUBLIC_LOGO_URL} alt={process.env.NEXT_PUBLIC_NAME} />
       </div>
-      <div className={styles.discord}>
-        <a href="#">Join the Discord</a>
-      </div>
+      
+      {process.env.NEXT_PUBLIC_DISCORD_URL && <div className={styles.discord}>
+        <a href={process.env.NEXT_PUBLIC_DISCORD_URL} target="_blank">Join the Discord</a>
+      </div>}
     </header>
   )
 }
