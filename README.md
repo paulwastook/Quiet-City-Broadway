@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5b572a21-28e3-48ff-820a-8b95aafc2ba8/deploy-status)](https://app.netlify.com/sites/enchanting-blancmange-3bcee2/deploys)
 
+![image](https://user-images.githubusercontent.com/88380778/193450723-968ea1f6-71bc-4abd-9883-be58cadba45b.png)
+
 Based on the Next + Netlify Starter and inspired by https://www.neutralcafe.tv/, this is an open-source project for online communities to launch their own websites to showcase any specified streamers who are currently live on Twitch.
 
 - [Quick(ish) Start Guide](#quick-ish--start-guide)
