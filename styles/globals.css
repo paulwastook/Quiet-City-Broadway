@@ -11,15 +11,14 @@ body {
 }
 
 body {
-  background: #40385c;
+  background: #2e2b38;
   color: #989ca4;
-  padding: 16px;
-  background: linear-gradient(0deg, #d16b60, #40385c) fixed;
+  padding: 0 16px;
 }
 
 .stream-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     gap: 32px;
     padding: 32px 0 32px;
 }
@@ -34,4 +33,13 @@ body {
 main {
   max-width: 1200px;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+  align-items: center;
+  justify-items: center;
 }
