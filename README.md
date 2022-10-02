@@ -24,6 +24,39 @@ You will need the following things:
 - An app registered on Twitch (https://dev.twitch.tv/console/apps)
 - Your Twitch app credentials
 
+Here's a screenshot of what config options Netlify will ask you...
+
+![image](https://user-images.githubusercontent.com/88380778/193448761-3167806d-6e58-4cb9-a49a-df0d04836350.png)
+
+... and what these things mean:
+
+**Repository Name**
+
+Netlify will create a place for editing the code in your GitHub account, this will be the name for it, change this to whatever you want
+
+**Twitch client ID & Twitch Client Secret**
+
+These are what you'll find once you've created your app on Twitch, try not to leak any of this information!
+
+**List of streamers**
+
+This is the list of the streamers you want to display on your website, this should be one long string of usernames separated by commas like `streamer1,streamer2,streamer3`
+
+**Discord URL**
+
+This is used to add a button in the header to your Discord, make sure you use a link that won't expire for this otherwise you'll have to update it later
+
+**Logo URL**
+
+This is a URL to a logo that'll be used for the logo in the header. Recommend using a small image for this. Imgur or Discord image links should work fine
+
+**Background colour hex**
+
+This is the 6-character long HTML colour code for what you want the background of your site to be. Recommend using darker shades for this. Make sure you do **not** include the `#` symbol in this. https://htmlcolorcodes.com/color-picker/ is a good resource for choosing a colour.
+
+**Name for your website**
+
+This will be used in the browser tab title and as alt text for your logo, spaces in here work fine.
 
 ## Development
 
