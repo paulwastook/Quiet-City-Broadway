@@ -9,6 +9,7 @@ Based on the Next + Netlify Starter and inspired by https://www.neutralcafe.tv/,
   * [Running Locally](#running-locally)
   * [Editing the streamer list](#editing-the-streamer-list)
   * [Deployment](#deployment)
+  * [Streamer List](#streamer-list)
 - [Contributions](#contributions)
 
 ## Quick(ish) Start Guide
@@ -58,6 +59,18 @@ NEXT_PUBLIC_DISCORD_URL=https://discord.com/
 NEXT_PUBLIC_LOGO_URL=https://i.imgur.com/Kd6rnLN.png
 NEXT_PUBLIC_BACKGROUND=2e2b38
 NEXT_PUBLIC_NAME=Broadway Demo Site
+```
+
+### Streamer list
+
+By default the list of streamers comes from the `STREAMERS` environment variable, however it's possible to override this with a JSON file located at `functions/data/streamers.json`.
+
+Here is an example of a populated streamers.json file:
+
+```json
+{
+	"streamers": ["streamer1", "streamer2", "streamer3"]
+}
 ```
 
 ### Deployment

@@ -1,5 +1,6 @@
 const qs = require('querystring');
 const axios = require('axios');
+const { streamers } = require('./data/streamers.json');
 
 exports.handler = async (event, context, callback) => {
   const opts = {
@@ -9,10 +10,10 @@ exports.handler = async (event, context, callback) => {
     scopes: '',
   }
 
-  const streamers = process.env.STREAMERS.split(',');
+  const streamerList = streamers.length ? streamers : process.env.STREAMERS.split(',');
   const params = qs.stringify(opts);
   const { data } = await axios.post(`https://id.twitch.tv/oauth2/token?${params}`);
-  const url = `https://api.twitch.tv/helix/users?login=${streamers.join('&login=')}`;
+  const url = `https://api.twitch.tv/helix/users?login=${streamerList.join('&login=')}`;
   
 
   const {

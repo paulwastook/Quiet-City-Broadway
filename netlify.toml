@@ -10,7 +10,7 @@
   TWITCH_CLIENT_ID = "Twitch client id"
   TWITCH_CLIENT_SECRET = "Twitch client secret"
   STREAMERS = "List of streamers (example - streamer1,streamer2,streamer3)"
-  NEXT_PUBLIC_DISCORD_URL = "Your community's Discord URL"
+  NEXT_PUBLIC_DISCORD_URL = "Your community's Discord URL (optional)"
   NEXT_PUBLIC_LOGO_URL = "A link to the logo for your community"
   NEXT_PUBLIC_BACKGROUND = "Background colour hex (without the #)"
   NEXT_PUBLIC_NAME = "Name for your website"
