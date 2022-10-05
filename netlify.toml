@@ -6,6 +6,12 @@
   directory = "functions/"
   included_files = ["data/**"]
 
+[[redirects]]
+  from = "/_next/static/*"
+  to = "/static/:splat"
+  status = 301
+  force = true
+
 [template.environment]
   TWITCH_CLIENT_ID = "Twitch client id"
   TWITCH_CLIENT_SECRET = "Twitch client secret"
@@ -14,3 +20,5 @@
   NEXT_PUBLIC_LOGO_URL = "A link to the logo for your community"
   NEXT_PUBLIC_BACKGROUND = "Background colour hex (without the #)"
   NEXT_PUBLIC_NAME = "Name for your website"
+  GAME_TITLE = "Twitch category (optional)"
+  STREAM_TITLE_REGEX = "A REGEX for the streamer's title (optional)"
