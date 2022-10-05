@@ -1,22 +1,22 @@
 .Streamer {
     display: inline-block;
-    box-shadow: 0px 8px 32px -8px rgba(0,0,0,0.75);
-    background: #fff;
+    box-shadow: 0px 8px 32px -8px rgba(0, 0, 0, 0.75);
+        background: rgb(24, 26, 27);
     overflow: hidden;
     text-decoration: 0;
     color: #989ca4;
     transition: all ease-in-out 150ms;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     max-width: 600px;
 }
 
-div:hover > .Streamer:not(:hover) .StreamerThumbnail {
+div:hover>.Streamer:not(:hover) .StreamerThumbnail {
     opacity: 0.95;
 }
 
 .Streamer:hover {
-    box-shadow: 0px 32px 64px -8px rgba(0,0,0,0.5);
-    transform: translate3d(0,-8px,0);
+    box-shadow: 0px 32px 64px -8px rgba(0, 0, 0, 0.5);
+        transform: translate3d(0, -8px, 0);
 
 }
 
@@ -57,7 +57,7 @@ div:hover > .Streamer:not(:hover) .StreamerThumbnail {
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
     font-weight: 600;
 }
@@ -67,12 +67,12 @@ div:hover > .Streamer:not(:hover) .StreamerThumbnail {
     display: flex;
     align-items: center;
     margin: 0;
-    color: #69706c;
+    color: #989ca4;
     font-weight: 800;
 }
 
 .StreamerCategory {
     font-size: 16px;
-    margin:0;
+    margin: 0;
     font-weight: 600;
-} 
+}
