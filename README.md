@@ -28,7 +28,8 @@ You will need the following things:
 
 Here's a screenshot of what config options Netlify will ask you...
 
-![image](https://user-images.githubusercontent.com/88380778/193448761-3167806d-6e58-4cb9-a49a-df0d04836350.png)
+![image](https://user-images.githubusercontent.com/88380778/194054388-6a7a4027-cae7-49c7-a136-c5124d787a18.png)
+
 
 ... and what these things mean:
 
@@ -59,6 +60,15 @@ This is the 6-character long HTML colour code for what you want the background o
 **Name for your website**
 
 This will be used in the browser tab title and as alt text for your logo, spaces in here work fine.
+
+**Twitch category (optional)**
+
+If you wish to only show streams from specific categories/games, you can do so here. For example, set this to `Grand Theft Auto V` if you only want to see streamers currently playing this game. Leave empty if you don't want to limit the streamers who are shown.
+
+**Twitch title filter (optional)**
+
+If you wish to only show streams with a specific term/phrase/tag in the title, you can do so here. For example, set this to `WildRP` if you only want to see streamers with WildRP in their stream title. Leave empty if you don't want to limit the streamers who are shown.
+
 
 ## Development
 
