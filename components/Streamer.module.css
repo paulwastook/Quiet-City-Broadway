@@ -43,7 +43,8 @@ div:hover > .Streamer:not(:hover) .StreamerThumbnail {
 .StreamerAvatar {
     display: inline-block;
     height: 35px;
-    width: 35px;
+    width: 100%;
+    max-width: 35px;
     border-radius: 50%;
     background-position: center;
     background-size: cover;
