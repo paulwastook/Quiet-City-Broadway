@@ -34,7 +34,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>{process.env.NEXT_PUBLIC_NAME}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={process.env.NEXT_PUBLIC_LOGO_URL} />
       </Head>
       <main>
         {isLoading && <Spinner />}
